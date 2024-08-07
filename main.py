@@ -2,77 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import r2_score
 
-"""
-Peça Grande (PG) = 50
-Peça 1      (P1) = 9,8
-Peça 2      (P2) = 10,4
-Peça 3      (P3) = 10,1
-Peça 4      (P4) = 10,1
-
-No código, o peso precisa ser em N.
-Por isso, os valores finais estão multiplicados
-por 10 nos arrays
-"""
-
-"""
-Mola 1 (grande) - 34 cm inicial
-  P4                (10,1)
-    valor = 32,3
-    deslocamento = 34 - 32,3    = 1,7
-  P4 + P3           (20,2)
-    valor = 30,6
-    deslocamento = 34 - 30,6    = 3,4
-  P4 + P3 + P2      (30,6)
-    valor = 28,8
-    deslocamento = 34 - 28,8    = 5,2
-  P4 + P3 + P2 + P1 (40,4)
-    valor = 27
-    deslocamento = 34 - 27      = 7
-  PG                (50)
-    valor = 25,4
-    deslocamento = 34 - 25,4    = 8,6
-  PG + P4           (60,1)
-    valor = 23,3
-    deslocamento = 34 - 23,3    = 10,7
-  PG + P4 + P3      (70,2)
-    valor = 22
-    deslocamento = 34 - 22      = 12
-  PG + P4 + P3 + P2 (80,6)
-    valor = 20,1
-    deslocamento = 34 - 20,1    = 13,9
-"""
-
 m1_x = np.array([1.7, 3.4, 5.2, 7, 8.6, 10.7, 12, 13.9])
 m1_y = np.array([1.01, 2.02, 3.06, 4.04, 5.00, 6.01, 7.02, 8.06])
-
-
-"""
-Mola 2 (pequena) - 38,4 cm inicial
-  P4                (10,1)
-    valor = 37,4
-    deslocamento = 38,4 - 37,4  = 1
-  P4 + P3           (20,2)
-    valor = 36,4
-    deslocamento = 38,4 - 36,4  = 2
-  P4 + P3 + P2      (30,6)
-    valor = 35,2
-    deslocamento = 38,4 - 35,2  = 3,2
-  P4 + P3 + P2 + P1 (40,4)
-    valor = 34,4
-    deslocamento = 38,4 - 34,4  = 4
-  PG                (50)
-    valor = 33,4
-    deslocamento = 38,4 - 33,4  = 5
-  PG + P4           (60,1)
-    valor = 32,3
-    deslocamento = 38,4 - 32,3  = 6,1
-  PG + P4 + P3      (70,2)
-    valor = 31,4
-    deslocamento = 38,4 - 31,4  = 7
-  PG + P4 + P3 + P2 (80,6)
-    valor = 30,4
-    deslocamento = 38,4 - 30,4  = 8
-"""
 
 m2_x = np.array([1, 2, 3.2, 4, 5, 6.1, 7, 8])
 m2_y = np.array([1.01, 2.02, 3.06, 4.04, 5.00, 6.01, 7.02, 8.06])
